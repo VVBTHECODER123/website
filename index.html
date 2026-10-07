@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. Rakesh Batabyal | Historian of Modern and Contemporary Times</title>
+    <title>Dr. Rakesh Batabyal | Historian & Public Intellectual</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +23,7 @@
                         stoneBorder: '#E2DDD3',
                         ink: '#1A1816',
                         inkMuted: '#524E48',
-                        bronze: '#8C6D3B',
-                        bronzeLight: '#FAF6EF'
+                        bronze: '#8C6D3B'
                     },
                     fontFamily: {
                         serif: ['Cormorant Garamond', 'Georgia', 'serif'],
@@ -35,8 +34,13 @@
         }
     </script>
     <style>
+        /* Fix any stray backdrop blur inheritance */
+        body, main, section {
+            filter: none !important;
+            backdrop-filter: none !important;
+        }
         .academic-card {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.3s ease-in-out;
         }
         .academic-card:hover {
             transform: translateY(-4px);
@@ -47,16 +51,17 @@
 <body class="bg-parchment text-ink font-sans antialiased selection:bg-bronze selection:text-warmWhite">
 
     <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-parchment/90 backdrop-blur-md border-b border-stoneBorder transition-all duration-300">
+    <header class="fixed top-0 left-0 w-full z-50 bg-parchment border-b border-stoneBorder">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
             <a href="#" class="font-serif text-2xl font-bold tracking-tight text-ink hover:text-bronze transition duration-300">
                 Rakesh Batabyal
             </a>
             
-            <nav class="flex items-center space-x-8 text-xs font-semibold uppercase tracking-widest text-inkMuted">
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-semibold uppercase tracking-widest text-inkMuted">
                 <a href="#about" class="hover:text-bronze transition duration-300">Biography</a>
                 <a href="#credentials" class="hover:text-bronze transition duration-300">Credentials & Career</a>
-                <a href="#publications" class="hover:text-bronze transition duration-300">Books</a>
+                <a href="#publications" class="hover:text-bronze transition duration-300">Publications</a>
+                <a href="#lectures" class="hover:text-bronze transition duration-300">Media & Lectures</a>
                 <a href="#contact" class="hover:text-bronze transition duration-300">Contact</a>
             </nav>
         </div>
@@ -64,315 +69,78 @@
 
     <main class="pt-20">
 
-        <!-- SECTION 1: Hero Cover Section (Parchment Tone with Soft Circular Backdrop Shape) -->
-        <section id="about" class="min-h-[85vh] bg-parchment flex flex-col justify-center py-16 px-6 lg:px-12 border-b border-stoneBorder relative overflow-hidden">
-            <!-- Decorative Color Backdrop Shape -->
-            <div class="absolute -right-24 -top-24 w-96 h-96 bg-bronze/5 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center relative z-10">
+        <!-- HERO SECTION -->
+        <section id="about" class="min-h-[85vh] bg-parchment flex flex-col justify-center py-16 px-6 lg:px-12 border-b border-stoneBorder relative">
+            <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Text / Titles -->
+                <!-- Main Narrative Text -->
                 <div class="lg:col-span-7 space-y-6">
-                    <span class="inline-block px-3 py-1 bg-bronze/10 text-bronze border border-bronze/20 text-xs uppercase tracking-widest font-bold rounded-sm">Academic Profile</span>
                     
-                    <h1 class="font-serif text-5xl sm:text-6xl font-bold text-ink leading-tight">
-                        Prof. Rakesh Batabyal, <span class="text-2xl sm:text-3xl font-normal text-inkMuted">Ph.D.</span>
-                    </h1>
-                    
-                    <div class="border-l-2 border-bronze pl-4 space-y-1">
-                        <p class="font-serif text-2xl sm:text-3xl text-ink font-semibold leading-relaxed">
+                    <div class="space-y-2">
+                        <h1 class="font-serif text-5xl sm:text-6xl font-bold text-ink leading-tight">
+                            Dr. Rakesh Batabyal
+                        </h1>
+                        <p class="font-serif text-2xl sm:text-3xl text-bronze italic font-medium">
                             Historian of Modern and Contemporary Times
                         </p>
-                        <p class="text-sm font-semibold uppercase tracking-wider text-bronze">
-                            Associate Professor | Jawaharlal Nehru University
-                        </p>
                     </div>
-                    
-                    <div class="text-sm text-inkMuted space-y-1 pt-2">
-                        <p class="font-medium text-ink">Centre for Media Studies</p>
-                        <p>Jawaharlal Nehru University (JNU), New Delhi</p>
+
+                    <!-- Refined Integrated Narrative -->
+                    <div class="space-y-4 text-inkMuted leading-relaxed text-base">
+                        <p>
+                            Dr. Rakesh Batabyal stands as an eminent Indian historian, media scholar, and profoundly reflective public intellectual who seamlessly bridges the past with the complexities of contemporary media landscapes. Born on December 15, 1966, his scholarly contributions span modern history, media structures, institutional evolution, and the political historiography of South Asia.
+                        </p>
+                        <p>
+                            Driven by a deep humanistic commitment, his work unpacks the friction between technological advancement and human well-being. Renowned for his meticulous institutional insights and sharp cultural commentary, he continually challenges conventional narratives surrounding nationalism, memory, and political discourse.
+                        </p>
+                        <p>
+                            As an Associate Professor at the Centre for Media Studies, School of Social Sciences, Jawaharlal Nehru University (JNU), New Delhi, he remains a vital voice in fostering critical thinking—inspiring scholars to examine the ethical dimensions of history and modern media systems.
+                        </p>
                     </div>
 
                     <div class="pt-4 flex flex-wrap gap-4">
-                        <a href="#credentials" class="px-6 py-3 bg-ink text-warmWhite text-xs uppercase tracking-wider font-bold hover:bg-bronze transition duration-300 shadow-md">
-                            View Credentials ↓
+                        <a href="#publications" class="px-6 py-3 bg-ink text-warmWhite text-xs uppercase tracking-wider font-bold hover:bg-bronze transition duration-300 shadow-md">
+                            View Publications & Books ↓
                         </a>
-                        <a href="#publications" class="px-6 py-3 border border-stoneBorder text-ink text-xs uppercase tracking-wider font-bold hover:border-bronze hover:text-bronze transition duration-300">
-                            View Research & Books
+                        <a href="#lectures" class="px-6 py-3 border border-stoneBorder bg-warmWhite text-ink text-xs uppercase tracking-wider font-bold hover:border-bronze hover:text-bronze transition duration-300">
+                            Watch Public Lectures
                         </a>
                     </div>
                 </div>
 
-                <!-- Cover Image -->
+                <!-- Profile Picture Frame -->
                 <div class="lg:col-span-5 max-w-md mx-auto w-full relative">
-                    <!-- Subtle Frame Backdrop Shape -->
-                    <div class="absolute inset-0 bg-bronze/10 translate-x-3 translate-y-3 -z-10 rounded-sm"></div>
-                    <div class="aspect-[3/4] bg-warmWhite border border-stoneBorder overflow-hidden shadow-sm p-1">
-                        <img src="rakesh-batabyal-primary.jpg" alt="Prof. Rakesh Batabyal Profile" class="w-full h-full object-cover">
+                    <div class="relative aspect-[3/4] bg-warmWhite border border-stoneBorder shadow-md p-2">
+                        <img src="rakesh-batabyal-primary.jpg" alt="Dr. Rakesh Batabyal" class="w-full h-full object-cover">
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- SECTION 2: Academic Credentials Section (Alabaster Stone Tone with Diamond Background Accent) -->
-        <section id="credentials" class="py-24 px-6 lg:px-12 bg-alabaster border-b border-stoneBorder relative overflow-hidden">
-            <!-- Decorative Rotated Square Accent Shape -->
-            <div class="absolute left-1/2 -bottom-40 -translate-x-1/2 w-80 h-80 bg-bronze/5 rotate-45 rounded-3xl pointer-events-none"></div>
-
-            <div class="max-w-5xl mx-auto space-y-16 relative z-10">
-                
-                <!-- Education -->
-                <div>
-                    <div class="border-b border-stoneBorder/60 pb-4 mb-8">
-                        <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Academic Background</span>
-                        <h2 class="font-serif text-3xl font-bold text-ink">Education & Qualifications</h2>
-                    </div>
-
-                    <div class="space-y-6">
-                        <div class="bg-warmWhite p-6 border-l-4 border-l-bronze border-t border-r border-b border-stoneBorder shadow-sm">
-                            <h3 class="font-serif text-xl font-bold text-ink">Jawaharlal Nehru University</h3>
-                            <p class="text-sm font-medium text-bronze">M.Phil. & Ph.D., Modern and Contemporary (Economic / Intellectual) History</p>
-                        </div>
-
-                        <div class="bg-warmWhite p-6 border-l-4 border-l-amber-700 border-t border-r border-b border-stoneBorder shadow-sm">
-                            <h3 class="font-serif text-xl font-bold text-ink">RESET – University of Vienna</h3>
-                            <p class="text-sm font-medium text-amber-800">Associate Researcher, Eastern & Central European Studies</p>
-                        </div>
-
-                        <div class="bg-warmWhite p-6 border-l-4 border-l-stone-600 border-t border-r border-b border-stoneBorder shadow-sm">
-                            <h3 class="font-serif text-xl font-bold text-ink">Indian Institute of Advanced Study (IIAS), Shimla</h3>
-                            <p class="text-sm font-medium text-stone-700">Post Doctorate, Philosophy</p>
-                        </div>
-
-                        <div class="bg-warmWhite p-6 border-l-4 border-l-amber-900 border-t border-r border-b border-stoneBorder shadow-sm">
-                            <h3 class="font-serif text-xl font-bold text-ink">University of Bucharest</h3>
-                            <p class="text-sm font-medium text-amber-900">Diploma, Romanian Language and Culture</p>
-                        </div>
-
-                        <div class="bg-warmWhite p-6 border-l-4 border-l-stone-800 border-t border-r border-b border-stoneBorder shadow-sm">
-                            <h3 class="font-serif text-xl font-bold text-ink">St. Xavier's College, Ranchi</h3>
-                            <p class="text-sm font-medium text-stone-800">B.A. (Hons.), History</p>
-                            <p class="text-xs text-inkMuted mt-1">Intermediate (History, Political Science, Economics, English Literature)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Professional Career -->
-                <div>
-                    <div class="border-b border-stoneBorder/60 pb-4 mb-8">
-                        <span class="text-bronze text-xs uppercase tracking-To give Prof. Rakesh Batabyal’s site distinct visual identity and depth—while keeping the clean, academic feel—we can introduce **subtle geometric shapes, subtle backdrop accents, and distinct section color tones** across the page. 
-
-Here is how we can apply unique background tones and design shapes for each section:
-
-1. **Hero Cover Section (`#FBF9F5` Parchment)**:
-   * **Shape**: A large, soft, circular gradient blur (`bg-bronze/10`) positioned behind the primary profile image to create a halo spotlight effect.
-2. **Biography Section (`#FFFFFF` Warm White)**:
-   * **Shape**: Minimalist offset rectangle framing behind quotes or key bio callouts.
-3. **Credentials & Career Section (`#F4F1EA` Alabaster)**:
-   * **Tone**: Deeper contrast background (`bg-alabaster`) to separate it visually from the biography.
-   * **Shape**: Decorative vertical bronze accent bars (`border-l-4 border-bronze`) for each qualification card.
-4. **Publications / Books Section (`#FBF9F5` Parchment)**:
-   * **Shape**: Floating subtle badge pill shapes (`rounded-full`) for publication tags like "Author" and "Editor" with warm background contrast (`bg-bronze/15`).
-5. **Contact Footer (`#1A1816` Dark Ink)**:
-   * **Tone**: A strong, dark contrast footer using the rich ink tone (`#1A1816`) with bronze and white text for a grounded, authoritative conclusion.
-
----
-
-### Complete Updated `index.html`
-
-```html
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. Rakesh Batabyal | Historian of Modern and Contemporary Times</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-    <link href="[https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        parchment: '#FBF9F5',
-                        warmWhite: '#FFFFFF',
-                        alabaster: '#F4F1EA',
-                        stoneBorder: '#E2DDD3',
-                        ink: '#1A1816',
-                        inkMuted: '#524E48',
-                        bronze: '#8C6D3B',
-                        bronzeLight: '#FAF6EF'
-                    },
-                    fontFamily: {
-                        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
-                        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .academic-card {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .academic-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px -10px rgba(26, 24, 22, 0.08);
-        }
-    </style>
-</head>
-<body class="bg-parchment text-ink font-sans antialiased selection:bg-bronze selection:text-warmWhite">
-
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-parchment/90 backdrop-blur-md border-b border-stoneBorder transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-            <a href="#" class="font-serif text-2xl font-bold tracking-tight text-ink hover:text-bronze transition duration-300">
-                Rakesh Batabyal
-            </a>
-            
-            <nav class="flex items-center space-x-8 text-xs font-semibold uppercase tracking-widest text-inkMuted">
-                <a href="#about" class="hover:text-bronze transition duration-300">Biography</a>
-                <a href="#credentials" class="hover:text-bronze transition duration-300">Credentials & Career</a>
-                <a href="#publications" class="hover:text-bronze transition duration-300">Books</a>
-                <a href="#contact" class="hover:text-bronze transition duration-300">Contact</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="pt-20">
-
-        <!-- HERO COVER SECTION (Parchment Tone + Geometric Blur Spotlight Shape) -->
-        <section class="min-h-[85vh] bg-parchment flex flex-col justify-center py-16 px-6 lg:px-12 border-b border-stoneBorder relative overflow-hidden">
-            
-            <!-- Geometric Backdrop Accent Shape -->
-            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-bronze/10 blur-3xl pointer-events-none"></div>
-            
-            <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center relative z-10">
-                
-                <!-- Text / Titles -->
-                <div class="lg:col-span-7 space-y-6">
-                    <span class="inline-block px-3 py-1 rounded-full text-bronze bg-bronze/10 border border-bronze/20 text-xs uppercase tracking-widest font-bold">Academic Profile</span>
-                    
-                    <h1 class="font-serif text-5xl sm:text-6xl font-bold text-ink leading-tight">
-                        Prof. Rakesh Batabyal, <span class="text-2xl sm:text-3xl font-normal text-inkMuted">Ph.D.</span>
-                    </h1>
-                    
-                    <div class="border-l-2 border-bronze pl-4 space-y-1">
-                        <p class="font-serif text-2xl sm:text-3xl text-ink font-semibold leading-relaxed">
-                            Historian of Modern and Contemporary Times
-                        </p>
-                        <p class="text-sm font-semibold uppercase tracking-wider text-bronze">
-                            Associate Professor | Jawaharlal Nehru University
-                        </p>
-                    </div>
-                    
-                    <div class="text-sm text-inkMuted space-y-1 pt-2">
-                        <p class="font-medium text-ink">Centre for Media Studies</p>
-                        <p>Jawaharlal Nehru University (JNU), New Delhi</p>
-                    </div>
-
-                    <div class="pt-4 flex flex-wrap gap-4">
-                        <a href="#about" class="px-6 py-3 bg-ink text-warmWhite text-xs uppercase tracking-wider font-bold hover:bg-bronze transition duration-300 shadow-md">
-                            Read Biography ↓
-                        </a>
-                        <a href="#publications" class="px-6 py-3 border border-stoneBorder bg-warmWhite/80 text-ink text-xs uppercase tracking-wider font-bold hover:border-bronze hover:text-bronze transition duration-300">
-                            View Research & Books
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Cover Image Frame with Geometric Offset Accent -->
-                <div class="lg:col-span-5 max-w-md mx-auto w-full relative">
-                    <!-- Soft Background Rectangle Shape Accent -->
-                    <div class="absolute -inset-2 bg-bronze/15 rounded-sm transform rotate-1"></div>
-                    <div class="relative aspect-[3/4] bg-warmWhite border border-stoneBorder overflow-hidden shadow-md p-1">
-                        <img src="rakesh-batabyal-primary.jpg" alt="Prof. Rakesh Batabyal Profile" class="w-full h-full object-cover">
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- BIOGRAPHY SECTION (Warm White Tone) -->
-        <section id="about" class="py-24 px-6 lg:px-12 bg-warmWhite border-b border-stoneBorder">
-            <div class="max-w-4xl mx-auto space-y-8">
-                <div class="border-b border-stoneBorder/60 pb-4">
-                    <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Background</span>
-                    <h2 class="font-serif text-3xl font-bold text-ink">Biography</h2>
-                </div>
-                
-                <p class="text-lg text-inkMuted leading-relaxed font-serif">
-                    Prof. Rakesh Batabyal is a distinguished historian specializing in modern and contemporary history, intellectual movements, media studies, and institutional development in South Asia and Central/Eastern Europe.
-                </p>
-            </div>
-        </section>
-
-        <!-- ACADEMIC CREDENTIALS & POSITIONS (Alabaster Contrast Tone) -->
-        <section id="credentials" class="py-24 px-6 lg:px-12 bg-alabaster border-b border-stoneBorder relative">
+        <!-- ACADEMIC CREDENTIALS & POSITIONS -->
+        <section id="credentials" class="py-24 px-6 lg:px-12 bg-alabaster border-b border-stoneBorder">
             <div class="max-w-5xl mx-auto space-y-16">
                 
-                <!-- Education -->
+                <!-- Professional Appointments -->
                 <div>
                     <div class="border-b border-stoneBorder/60 pb-4 mb-8">
-                        <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Academic Background</span>
-                        <h2 class="font-serif text-3xl font-bold text-ink">Education & Qualifications</h2>
-                    </div>
-
-                    <div class="space-y-4">
-                        <div class="bg-warmWhite p-6 border border-stoneBorder border-l-4 border-l-bronze shadow-sm">
-                            <h3 class="font-serif text-xl font-bold text-ink">Jawaharlal Nehru University</h3>
-                            <p class="text-sm font-medium text-bronze">M.Phil. & Ph.D., Modern and Contemporary History</p>
-                        </div>
-
-                        <div class="bg-warmWhite p-6 border border-stoneBorder border-l-4 border-l-bronze shadow-sm">
-                            <h3 class="font-serif text-xl font-bold text-ink">RESET – University of Vienna</h3>
-                            <p class="text-sm font-medium text-bronze">Associate Researcher, Eastern & Central European Studies</p>
-                        </div>
-
-                        <div class="bg-warmWhite p-6 border border-stoneBorder border-l-4 border-l-bronze shadow-sm">
-                            <h3 class="font-serif text-xl font-bold text-ink">Indian Institute of Advanced Study (IIAS), Shimla</h3>
-                            <p class="text-sm font-medium text-bronze">Post Doctorate, Philosophy</p>
-                        </div>
-
-                        <div class="bg-warmWhite p-6 border border-stoneBorder border-l-4 border-l-bronze shadow-sm">
-                            <h3 class="font-serif text-xl font-bold text-ink">University of Bucharest</h3>
-                            <p class="text-sm font-medium text-bronze">Diploma, Romanian Language and Culture</p>
-                        </div>
-
-                        <div class="bg-warmWhite p-6 border border-stoneBorder border-l-4 border-l-bronze shadow-sm">
-                            <h3 class="font-serif text-xl font-bold text-ink">St. Xavier's College, Ranchi</h3>
-                            <p class="text-sm font-medium text-bronze">B.A. (Hons.), History</p>
-                            <p class="text-xs text-inkMuted mt-1">Intermediate (History, Political Science, Economics, English Literature)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Professional Career -->
-                <div>
-                    <div class="border-b border-stoneBorder/60 pb-4 mb-8">
-                        <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Academic Journey</span>
-                        <h2 class="font-serif text-3xl font-bold text-ink">Professional Appointments</h2>
+                        <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Career & Positions</span>
+                        <h2 class="font-serif text-3xl font-bold text-ink">Appointments & Fellowships</h2>
                     </div>
 
                     <div class="space-y-4">
                         <div class="bg-warmWhite p-5 border border-stoneBorder flex justify-between items-center shadow-sm">
                             <div>
                                 <h3 class="font-serif text-lg font-bold text-ink">Associate Professor</h3>
-                                <p class="text-xs text-inkMuted">Jawaharlal Nehru University (JNU), New Delhi</p>
+                                <p class="text-xs text-inkMuted">Centre for Media Studies, School of Social Sciences, JNU, New Delhi</p>
                             </div>
                             <span class="px-3 py-1 rounded-full text-xs font-semibold text-bronze bg-bronze/10 border border-bronze/20 uppercase">2000 – Present</span>
                         </div>
 
                         <div class="bg-warmWhite p-5 border border-stoneBorder flex justify-between items-center shadow-sm">
                             <div>
-                                <h3 class="font-serif text-lg font-bold text-ink">Associate Professor and Deputy Director</h3>
+                                <h3 class="font-serif text-lg font-bold text-ink">Associate Professor & Deputy Director</h3>
                                 <p class="text-xs text-inkMuted">Academic Staff College, Jawaharlal Nehru University</p>
                             </div>
                             <span class="px-3 py-1 rounded-full text-xs font-semibold text-bronze bg-bronze/10 border border-bronze/20 uppercase">2000 – 2015</span>
@@ -388,18 +156,35 @@ Here is how we can apply unique background tones and design shapes for each sect
 
                         <div class="bg-warmWhite p-5 border border-stoneBorder flex justify-between items-center shadow-sm">
                             <div>
-                                <h3 class="font-serif text-lg font-bold text-ink">Honorary Fellow</h3>
-                                <p class="text-xs text-inkMuted">National Institute of Panjab Studies, Delhi</p>
-                            </div>
-                            <span class="px-3 py-1 rounded-full text-xs font-semibold text-bronze bg-bronze/10 border border-bronze/20 uppercase">2004</span>
-                        </div>
-
-                        <div class="bg-warmWhite p-5 border border-stoneBorder flex justify-between items-center shadow-sm">
-                            <div>
                                 <h3 class="font-serif text-lg font-bold text-ink">Postdoctoral Fellow</h3>
-                                <p class="text-xs text-inkMuted">Indian Institute of Advanced Study, Rashtrapati Nivas, Shimla</p>
+                                <p class="text-xs text-inkMuted">Indian Institute of Advanced Study (IIAS), Rashtrapati Nivas, Shimla</p>
                             </div>
                             <span class="px-3 py-1 rounded-full text-xs font-semibold text-bronze bg-bronze/10 border border-bronze/20 uppercase">1996 – 1999</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div>
+                    <div class="border-b border-stoneBorder/60 pb-4 mb-8">
+                        <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Academic Foundation</span>
+                        <h2 class="font-serif text-3xl font-bold text-ink">Education & Qualifications</h2>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-warmWhite p-6 border border-stoneBorder border-l-4 border-l-bronze shadow-sm">
+                            <h3 class="font-serif text-xl font-bold text-ink">Jawaharlal Nehru University</h3>
+                            <p class="text-sm font-medium text-bronze">M.Phil. & Ph.D., Modern and Contemporary History</p>
+                        </div>
+
+                        <div class="bg-warmWhite p-6 border border-stoneBorder border-l-4 border-l-bronze shadow-sm">
+                            <h3 class="font-serif text-xl font-bold text-ink">RESET – University of Vienna</h3>
+                            <p class="text-sm font-medium text-bronze">Associate Researcher, Eastern & Central European Studies</p>
+                        </div>
+
+                        <div class="bg-warmWhite p-6 border border-stoneBorder border-l-4 border-l-bronze shadow-sm">
+                            <h3 class="font-serif text-xl font-bold text-ink">University of Bucharest</h3>
+                            <p class="text-sm font-medium text-bronze">Diploma, Romanian Language and Culture</p>
                         </div>
                     </div>
                 </div>
@@ -407,106 +192,196 @@ Here is how we can apply unique background tones and design shapes for each sect
             </div>
         </section>
 
-        <!-- PUBLICATIONS SECTION (Parchment Tone + Geometric Book Cards) -->
+        <!-- PUBLICATIONS SECTION -->
         <section id="publications" class="py-24 px-6 lg:px-12 bg-parchment border-b border-stoneBorder">
-            <div class="max-w-7xl mx-auto space-y-12">
-                <div class="border-b border-stoneBorder/60 pb-6">
-                    <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Monographs & Books</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink">Published Works</h2>
+            <div class="max-w-7xl mx-auto space-y-16">
+                
+                <!-- Major Books Grid -->
+                <div>
+                    <div class="border-b border-stoneBorder/60 pb-6 mb-12">
+                        <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Monographs & Books</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink">Published Works</h2>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        
+                        <!-- Book 1 -->
+                        <div class="academic-card bg-warmWhite border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group shadow-sm">
+                                    <img src="book-idea-of-order.jpg" alt="Idea of Order" class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
+                                    <span class="px-2.5 py-0.5 rounded-full bg-bronze/15 text-bronze border border-bronze/20">Author</span>
+                                    <span class="text-inkMuted">2024</span>
+                                </div>
+                                <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
+                                    Idea of Order: Perspectives from Central and Eastern Europe (1989–2022)
+                                </h3>
+                                <p class="text-inkMuted text-sm leading-relaxed">
+                                    Examines political and economic transformations in Central and Eastern Europe following the end of the socialist era.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Book 2 -->
+                        <div class="academic-card bg-warmWhite border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group shadow-sm">
+                                    <img src="book-communalism-in-bengal.jpg" alt="Communalism in Bengal" class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
+                                    <span class="px-2.5 py-0.5 rounded-full bg-bronze/15 text-bronze border border-bronze/20">Author</span>
+                                    <span class="text-inkMuted">2005</span>
+                                </div>
+                                <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
+                                    Communalism in Bengal: From Famine to Partition (1932–1947)
+                                </h3>
+                                <p class="text-inkMuted text-sm leading-relaxed">
+                                    Critical study detailing the social, political, and institutional trajectory leading to the 1947 partition of Bengal.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Book 3 -->
+                        <div class="academic-card bg-warmWhite border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group shadow-sm">
+                                    <img src="book-jnu-making-of-university.jpg" alt="JNU: The Making of a University" class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
+                                    <span class="px-2.5 py-0.5 rounded-full bg-bronze/15 text-bronze border border-bronze/20">Author</span>
+                                    <span class="text-inkMuted">2014</span>
+                                </div>
+                                <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
+                                    JNU: The Making of a University
+                                </h3>
+                                <p class="text-inkMuted text-sm leading-relaxed">
+                                    A definitive history exploring the institutional design, intellectual ethos, and cultural impact of JNU.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Book 4 -->
+                        <div class="academic-card bg-warmWhite border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group shadow-sm">
+                                    <img src="book-modern-indian-speeches.jpg" alt="Penguin Book of Modern Indian Speeches" class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
+                                    <span class="px-2.5 py-0.5 rounded-full bg-ink/10 text-ink border border-ink/20">Editor</span>
+                                    <span class="text-inkMuted">2007</span>
+                                </div>
+                                <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
+                                    The Penguin Book of Modern Indian Speeches
+                                </h3>
+                                <p class="text-inkMuted text-sm leading-relaxed">
+                                    Curated anthology tracing oratorical milestones and political thought across modern Indian history.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Book 5 -->
+                        <div class="academic-card bg-warmWhite border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group shadow-sm">
+                                    <img src="book-modern-school.jpg" alt="The Modern School History" class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
+                                    <span class="px-2.5 py-0.5 rounded-full bg-bronze/15 text-bronze border border-bronze/20">Author</span>
+                                </div>
+                                <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
+                                    The Modern School: A History
+                                </h3>
+                                <p class="text-inkMuted text-sm leading-relaxed">
+                                    Historical analysis examining educational developments, institutional heritage, and modern pedagogy.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Articles & Papers -->
+                <div>
+                    <div class="border-b border-stoneBorder/60 pb-4 mb-8">
+                        <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Academic Research</span>
+                        <h2 class="font-serif text-3xl font-bold text-ink">Selected Articles & Journal Papers</h2>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-warmWhite p-6 border border-stoneBorder shadow-sm">
+                            <span class="text-xs font-bold uppercase text-bronze tracking-wider block mb-1">Book Chapter | 2011</span>
+                            <h3 class="font-serif text-xl font-bold text-ink mb-2">Countering Hegemony: The Polish Solidarity Movement in the Memory of Indians</h3>
+                            <p class="text-inkMuted text-sm leading-relaxed">
+                                Published by the Institute of National Remembrance, Warsaw. Examines Indian perspectives on the Polish Solidarity movement, evaluating Cold War diplomatic memory and cross-cultural historical alignment.
+                            </p>
+                        </div>
+
+                        <div class="bg-warmWhite p-6 border border-stoneBorder shadow-sm">
+                            <span class="text-xs font-bold uppercase text-bronze tracking-wider block mb-1">Journal Article | 2013</span>
+                            <h3 class="font-serif text-xl font-bold text-ink mb-2">The Imperial Embers and the Invocation to Cold War: Colombo Conference 1950</h3>
+                            <p class="text-inkMuted text-sm leading-relaxed">
+                                Published in *Proceedings of the Indian History Congress*. Analyzes post-colonial Asian foreign policy shifts, detailing how British imperial decline shaped early Asian diplomatic initiatives.
+                            </p>
+                        </div>
+
+                        <div class="bg-warmWhite p-6 border border-stoneBorder shadow-sm">
+                            <span class="text-xs font-bold uppercase text-bronze tracking-wider block mb-1">Historiographical Review | 2014</span>
+                            <h3 class="font-serif text-xl font-bold text-ink mb-2">The Spoils of Partition: Bengal and India, 1947–1967</h3>
+                            <p class="text-inkMuted text-sm leading-relaxed">
+                                Published in *Studies in History* (Sage). Dissects the long-term socio-political aftermath, border demographics, and ongoing administrative ripples of Bengal’s partition.
+                            </p>
+                        </div>
+
+                        <div class="bg-warmWhite p-6 border border-stoneBorder shadow-sm">
+                            <span class="text-xs font-bold uppercase text-bronze tracking-wider block mb-1">Journal Article | 2021</span>
+                            <h3 class="font-serif text-xl font-bold text-ink mb-2">Camera-e Dhorechen Manusher Swadhinata (Satyajit Ray & Modern Moral Vision)</h3>
+                            <p class="text-inkMuted text-sm leading-relaxed">
+                                Published in *Aparajito Satyajit*, Kalyani University. Investigates Satyajit Ray’s cinematic lens and how visual narratives articulate themes of human agency and modern political morality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PUBLIC LECTURES & MEDIA SECTION -->
+        <section id="lectures" class="py-24 px-6 lg:px-12 bg-alabaster border-b border-stoneBorder">
+            <div class="max-w-7xl mx-auto space-y-12">
+                <div class="border-b border-stoneBorder/60 pb-6">
+                    <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Mainstream Work</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink">Public Lectures & Media Addresses</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
                     
-                    <!-- Book 1: Idea of Order -->
-                    <div class="academic-card bg-warmWhite border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
+                    <div class="bg-warmWhite border border-stoneBorder p-6 shadow-sm flex flex-col justify-between">
                         <div>
-                            <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group shadow-sm">
-                                <img src="book-idea-of-order.jpg" alt="Idea of Order" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div class="aspect-video bg-ink/10 mb-4 overflow-hidden rounded border border-stoneBorder relative">
+                                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/videoseries?list=PL30E39F29E0B20EE6" title="Public Lectures" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
-                                <span class="px-2.5 py-0.5 rounded-full bg-bronze/15 text-bronze border border-bronze/20">Author</span>
-                                <span class="text-inkMuted">2024</span>
-                            </div>
-                            <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
-                                Idea of Order: Perspectives from Central and Eastern Europe (1989–2022)
-                            </h3>
-                            <p class="text-inkMuted text-sm leading-relaxed mb-4">
-                                Examines political and economic transformations in Central and Eastern Europe following the end of the socialist era.
+                            <span class="text-xs font-bold uppercase text-bronze tracking-wider block mb-1">Keynote Lecture Series</span>
+                            <h3 class="font-serif text-xl font-bold text-ink mb-2">The Curriculum as a Political Document</h3>
+                            <p class="text-inkMuted text-sm leading-relaxed">
+                                A keynote discourse exploring creative pedagogy, aesthetics, and political ideology in curriculum design and institutional history.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Book 2: Communalism in Bengal -->
-                    <div class="academic-card bg-warmWhite border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
+                    <div class="bg-warmWhite border border-stoneBorder p-6 shadow-sm flex flex-col justify-between">
                         <div>
-                            <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group shadow-sm">
-                                <img src="book-communalism-in-bengal.jpg" alt="Communalism in Bengal" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div class="aspect-video mb-4 rounded border border-stoneBorder flex items-center justify-center p-6 text-center bg-stone-100">
+                                <div>
+                                    <p class="font-serif text-xl font-bold text-ink mb-1">Global Academic Addresses</p>
+                                    <p class="text-xs text-inkMuted">University of Tokyo | University of Vienna | IIAS Shimla</p>
+                                </div>
                             </div>
-                            <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
-                                <span class="px-2.5 py-0.5 rounded-full bg-bronze/15 text-bronze border border-bronze/20">Author</span>
-                                <span class="text-inkMuted">2005</span>
-                            </div>
-                            <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
-                                Communalism in Bengal: From Famine to Partition (1932–1947)
-                            </h3>
-                            <p class="text-inkMuted text-sm leading-relaxed mb-4">
-                                Critical study detailing the social, political, and institutional trajectory leading to the 1947 partition of Bengal.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Book 3: JNU: The Making of a University -->
-                    <div class="academic-card bg-warmWhite border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
-                        <div>
-                            <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group shadow-sm">
-                                <img src="book-jnu-making-of-university.jpg" alt="JNU: The Making of a University" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                            </div>
-                            <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
-                                <span class="px-2.5 py-0.5 rounded-full bg-bronze/15 text-bronze border border-bronze/20">Author</span>
-                                <span class="text-inkMuted">2014</span>
-                            </div>
-                            <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
-                                JNU: The Making of a University
-                            </h3>
-                            <p class="text-inkMuted text-sm leading-relaxed mb-4">
-                                A definitive history exploring the institutional design, intellectual ethos, and cultural impact of JNU.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Book 4: The Penguin Book of Modern Indian Speeches -->
-                    <div class="academic-card bg-warmWhite border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
-                        <div>
-                            <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group shadow-sm">
-                                <img src="book-modern-indian-speeches.jpg" alt="Penguin Book of Modern Indian Speeches" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                            </div>
-                            <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
-                                <span class="px-2.5 py-0.5 rounded-full bg-ink/10 text-ink border border-ink/20">Editor</span>
-                                <span class="text-inkMuted">2007</span>
-                            </div>
-                            <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
-                                The Penguin Book of Modern Indian Speeches
-                            </h3>
-                            <p class="text-inkMuted text-sm leading-relaxed mb-4">
-                                Curated anthology tracing oratorical milestones and political thought across modern Indian history.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Book 5: The Modern School -->
-                    <div class="academic-card bg-warmWhite border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
-                        <div>
-                            <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group shadow-sm">
-                                <img src="book-modern-school.jpg" alt="The Modern School History" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                            </div>
-                            <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
-                                <span class="px-2.5 py-0.5 rounded-full bg-bronze/15 text-bronze border border-bronze/20">Author</span>
-                            </div>
-                            <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
-                                The Modern School: A History
-                            </h3>
-                            <p class="text-inkMuted text-sm leading-relaxed mb-4">
-                                Historical analysis examining educational developments, institutional heritage, and modern pedagogy.
+                            <span class="text-xs font-bold uppercase text-bronze tracking-wider block mb-1">International Symposia</span>
+                            <h3 class="font-serif text-xl font-bold text-ink mb-2">Cold War Historiography & South Asian Nationalism</h3>
+                            <p class="text-inkMuted text-sm leading-relaxed">
+                                Selected public lectures delivered across global platforms exploring intellectual history, freedom movements, and media systems.
                             </p>
                         </div>
                     </div>
@@ -517,11 +392,11 @@ Here is how we can apply unique background tones and design shapes for each sect
 
     </main>
 
-    <!-- FOOTER / CONTACT SECTION (Dark Ink Contrast) -->
+    <!-- FOOTER / CONTACT SECTION -->
     <footer id="contact" class="py-16 px-6 lg:px-12 bg-ink text-warmWhite">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
             <div>
-                <p class="font-serif text-2xl font-bold text-warmWhite mb-2">Contact & Academic Inquiries</p>
+                <p class="font-serif text-2xl font-bold text-warmWhite mb-2">Contact & Inquiries</p>
                 <div class="flex flex-col sm:flex-row sm:items-center gap-4 text-sm text-stoneBorder">
                     <a href="mailto:rakeshbatabyal@jnu.ac.in" class="hover:text-bronze transition duration-300 underline underline-offset-4">rakeshbatabyal@jnu.ac.in</a>
                     <span class="hidden sm:inline text-stoneBorder/40">•</span>
@@ -532,8 +407,8 @@ Here is how we can apply unique background tones and design shapes for each sect
                 <a href="#" class="hover:text-bronze transition duration-300">Back to Top ↑</a>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-warmWhite/10 text-xs text-stoneBorder/60 flex justify-between items-center">
-            <p>© Prof. Rakesh Batabyal. All rights reserved.</p>
+        <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-warmWhite/10 text-xs text-stoneBorder/60">
+            <p>© Dr. Rakesh Batabyal. All rights reserved.</p>
         </div>
     </footer>
 
